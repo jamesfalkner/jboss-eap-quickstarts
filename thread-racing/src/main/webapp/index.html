@@ -38,11 +38,7 @@
         output.innerHTML = '';
         var openshift = ${openshift};
         var host;
-        if (openshift) {
-            host = window.location.hostname + ':8000';
-        } else {
-            host = window.location.host;
-        }
+        host = window.location.host;
         var url = 'ws://' + host + window.location.pathname + 'race';
         var ws = new WebSocket(url);
         ws.onmessage = function (message) {
